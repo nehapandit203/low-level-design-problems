@@ -38,7 +38,7 @@ You can play the game within Google Search by just searching for “tictactoe”
 
 ### Problem Requirements
 
-- Board can be of any NxN size.
+- Board can be of any 3x3 size.
 - There can be any number of players. Each player will be allotted a symbol.
 - The players can be either humans or bots. Each human player will have a name.
 - We should allow support to undo any number of moves.
@@ -70,3 +70,4 @@ If a player is a computer, their user id will be C.
 ##### Refrences
 - https://medium.com/@avinashsoni9829/tic-tac-toe-low-level-design-f7ebefa88efc
 - https://github.com/Naman-Bhalla/lldmar2023
+- https://www.youtube.com/playlist?list=PL6W8uoQQ2c61X_9e6Net0WdYZidm7zooW
