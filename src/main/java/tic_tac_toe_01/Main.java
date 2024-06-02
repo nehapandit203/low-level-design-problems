@@ -1,6 +1,6 @@
-package tictactoe;
+package tic_tac_toe_01;
 
-import tictactoe.controller.TicTacToeGame;
+import tic_tac_toe_01.controller.TicTacToeGame;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
-package tictactoe.model;
+package tic_tac_toe_01.model;
 
-import tictactoe.service.botPlayerStrategy.BotPlayingStrategy;
+import tic_tac_toe_01.service.botPlayerStrategy.BotPlayingStrategy;
 
 public class BotPlayer extends Player{
 

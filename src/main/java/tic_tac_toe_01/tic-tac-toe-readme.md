@@ -6,7 +6,7 @@
 
 TicTacToe is a 2 player game played on a 3 x 3 board. Each player is allotted a symbol (one X and one O). Initially, the board is empty. Alternatively, each player takes a turn and puts their symbol at any empty slot. The first player to get their symbol over a complete row OR a complete column OR a diagonal wins.
 
-You can play the game within Google Search by just searching for “tictactoe”!
+You can play the game within Google Search by just searching for “tic_tac_toe_01”!
 ~~~
   X X 0
   0 0 X

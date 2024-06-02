@@ -1,12 +1,12 @@
-package tictactoe.controller;
+package tic_tac_toe_01.controller;
 
 
-import tictactoe.model.Board;
-import tictactoe.model.Pair;
-import tictactoe.model.Player;
-import tictactoe.model.Symbol;
-import tictactoe.service.winingStategy.DefaultWinningStratergy;
-import tictactoe.service.winingStategy.WinningStratergy;
+import tic_tac_toe_01.model.Board;
+import tic_tac_toe_01.model.Pair;
+import tic_tac_toe_01.model.Player;
+import tic_tac_toe_01.model.Symbol;
+import tic_tac_toe_01.service.winingStategy.DefaultWinningStratergy;
+import tic_tac_toe_01.service.winingStategy.WinningStratergy;
 
 import java.util.Deque;
 import java.util.LinkedList;

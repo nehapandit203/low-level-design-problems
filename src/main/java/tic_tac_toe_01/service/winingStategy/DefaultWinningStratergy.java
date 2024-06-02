@@ -1,7 +1,7 @@
-package tictactoe.service.winingStategy;
+package tic_tac_toe_01.service.winingStategy;
 
-import tictactoe.model.Board;
-import tictactoe.model.Symbol;
+import tic_tac_toe_01.model.Board;
+import tic_tac_toe_01.model.Symbol;
 
 public class DefaultWinningStratergy implements WinningStratergy {
 

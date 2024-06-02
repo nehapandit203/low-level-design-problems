@@ -1,4 +1,4 @@
-package tictactoe.model;
+package tic_tac_toe_01.model;
 
 import java.util.ArrayList;
 import java.util.List;

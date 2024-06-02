@@ -1,4 +1,4 @@
-package tictactoe.model;
+package tic_tac_toe_01.model;
 
 public class Cell {
     Symbol symbol;

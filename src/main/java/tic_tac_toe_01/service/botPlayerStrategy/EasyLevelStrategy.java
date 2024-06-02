@@ -1,4 +1,4 @@
-package tictactoe.service.botPlayerStrategy;
+package tic_tac_toe_01.service.botPlayerStrategy;
 
 public class EasyLevelStrategy implements BotPlayingStrategy{
     @Override
