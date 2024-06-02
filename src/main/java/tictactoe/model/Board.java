@@ -38,10 +38,14 @@ public class Board {
 
 
     public boolean addPiece(int row, int column, Symbol symbol) {
-        if(cell[row][column] != null) {
-            return false;
+        if(row < 3 && column <3) {
+            if (cell[row][column] != null) {
+                return false;
+            }
+            cell[row][column] = new Cell(symbol);
         }
-        cell[row][column] = new Cell(symbol);
+        else
+            return false;
         return true;
     }
 
