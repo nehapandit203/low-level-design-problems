@@ -5,6 +5,8 @@ import tictactoe.model.Board;
 import tictactoe.model.Pair;
 import tictactoe.model.Player;
 import tictactoe.model.Symbol;
+import tictactoe.service.winingStategy.DefaultWinningStratergy;
+import tictactoe.service.winingStategy.WinningStratergy;
 
 import java.util.Deque;
 import java.util.LinkedList;
@@ -14,6 +16,7 @@ import java.util.Scanner;
 public class TicTacToeGame {
     private Board gameBoard;
     private Deque<Player> players;
+    private WinningStratergy winningStratergy;
 
     public void initializeGame() {
         players = new LinkedList<>();
@@ -21,10 +24,12 @@ public class TicTacToeGame {
         Player p2 = new Player("Player2", Symbol.O);
 
         players.add(p1);
-        players.add(p2);
+        players.add(p2); //we can pass bot as player with is Difficulty Level
+
 
         //hardcoing board size to 3-we can pass it from client
         gameBoard = new Board(3);
+        this.winningStratergy = new DefaultWinningStratergy();//Pass this from game Constructor from client
 
     }
 
@@ -62,7 +67,7 @@ public class TicTacToeGame {
             }
             players.addLast(playerTurn);
 
-            boolean winner = checkWinner(inputRow, inputColumn, playerTurn.getSymbol());
+            boolean winner = winningStratergy.checkWinner(inputRow, inputColumn, playerTurn.getSymbol(),gameBoard);
             if(winner) {
                 return playerTurn.getName();
             }
@@ -71,44 +76,5 @@ public class TicTacToeGame {
         return "Tie!!";
     }
 
-    /*Can be optimized with N Queens 2 problem in TC: O(1)*/
-    private boolean checkWinner(int row, int column, Symbol symbol) {
-            boolean rowMatch = true;
-            boolean columnMatch = true;
-            boolean diagonalMatch = true;
-            boolean antiDiagonalMatch = true;
-
-            //need to check in row
-            for(int i=0;i<gameBoard.size;i++) {
-
-                if(gameBoard.cell[row][i] == null || gameBoard.cell[row][i].getSymbol() != symbol) {
-                    rowMatch = false;
-                }
-            }
-
-            //need to check in column
-            for(int i=0;i<gameBoard.size;i++) {
-
-                if(gameBoard.cell[i][column] == null || gameBoard.cell[i][column].getSymbol() != symbol) {
-                    columnMatch = false;
-                }
-            }
-
-            //need to check diagonals
-            for(int i=0, j=0; i<gameBoard.size;i++,j++) {
-                if (gameBoard.cell[i][j] == null || gameBoard.cell[i][j].getSymbol() != symbol) {
-                    diagonalMatch = false;
-                }
-            }
-
-            //need to check anti-diagonals
-            for(int i=0, j=gameBoard.size-1; i<gameBoard.size;i++,j--) {
-                if (gameBoard.cell[i][j] == null || gameBoard.cell[i][j].getSymbol() != symbol) {
-                    antiDiagonalMatch = false;
-                }
-            }
-            return rowMatch || columnMatch || diagonalMatch || antiDiagonalMatch;
-
-    }
 
 }
