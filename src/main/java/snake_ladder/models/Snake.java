@@ -1,15 +1,14 @@
 package snake_ladder.models;
 
-import com.example.SnakeAndLadder.enums.CellType;
 import lombok.Getter;
 import lombok.Setter;
+import snake_ladder.enums.CellType;
 
 @Getter
 @Setter
 public class Snake extends CellEntity{
     int startIndex;
     int endIndex;
-
 
     public Snake(int startIndex, int endIndex){
         super(CellType.S);
