@@ -1,7 +1,7 @@
-package tic_tac_toe_01.service.winingStategy;
+package tictactoe.service.winingStategy;
 
-import tic_tac_toe_01.model.Board;
-import tic_tac_toe_01.model.Symbol;
+import tictactoe.model.Board;
+import tictactoe.model.Symbol;
 
 public class FasterTimeComplexity implements WinningStratergy {
     @Override

@@ -1,4 +1,4 @@
-package tic_tac_toe_01.exception;
+package tictactoe.exception;
 
 public class InvalidBoundryOfBoardException extends Exception{
 }
